@@ -43,6 +43,7 @@ TLSE* inEnd(TLSE* li, int i){
 //inOrder
 TLSE* inOrder(TLSE* li, int i){
     
+    /* A IMPLEMENTAR */
 
     return NULL;
 }
@@ -59,6 +60,29 @@ void print(TLSE* li){
     }
 }
 //out
+TLSE* out(TLSE* li, int val){
+    TLSE* p = li; // ponteiro percorre
+    TLSE* ant = NULL; // ponteiro guarda anterior
+
+    while (p->next != NULL && p->info != val){// busca
+        ant = p;
+        p = p->next;
+    }
+
+    if (p == NULL){ // NULL - fim da lista ( nao encontrado )
+        return li;
+    }
+
+    if(ant == NULL) li = p->next;
+    else ant->next = p->next;
+     
+    // atualiza ant->next
+    // free
+    free(p);
+    return li;
+}
+
+
 
 //delete
 TLSE* delete(TLSE* li){
@@ -80,29 +104,30 @@ int main(){
     TLSE* listE_inv;
     listE_no = init(listE_no);
     listE_inv = init(listE_inv);
-    
+
     listE_no = inStart(listE_no, 1);
     listE_no = inStart(listE_no, 2);
     listE_no = inStart(listE_no, 3);
     listE_no = inStart(listE_no, 4);
     listE_no = inStart(listE_no, 5);
-    listE_no = inStart(listE_no, 6);
-    
 
-   
-   listE_inv = inEnd(listE_inv, 1);
-   listE_inv = inEnd(listE_inv, 2);
-   listE_inv = inEnd(listE_inv, 3);
-   listE_inv = inEnd(listE_inv, 4);
-   listE_inv = inEnd(listE_inv, 5);
-    
-
-    
+    listE_inv = inEnd(listE_inv, 1);
+    listE_inv = inEnd(listE_inv, 2);
+    listE_inv = inEnd(listE_inv, 3);
+    listE_inv = inEnd(listE_inv, 4);
+    listE_inv = inEnd(listE_inv, 5);
 
     print(listE_no);
     printf("\n");
     print(listE_inv);
 
+    listE_no = out(listE_no, 3);// remocendo no 3
+
+    printf("\n");
+    printf("\n");
+    print(listE_no);
+    printf("\n");
+    print(listE_inv);
 
     listE_no = delete(listE_no);
     listE_inv = delete(listE_inv);
