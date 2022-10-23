@@ -3,7 +3,7 @@
 *a); 
 */
 #include <stdio.h>
-#include <stdlib.h>
+#include<stdlib.h>
 
 typedef struct NoA{
     int num;
@@ -31,27 +31,43 @@ void imprime(TNoA *a){
 }
 
 
+int comp(TNoA *a, TNoA *b){
+    if(!a && !b) return 1;
+    if(!a || !b) return 0;
 
-int maior(TNoA *a){
-    if(a == NULL){
-        return -1;
-    }
-    int maior1 = maior(a->esq);
-    int maior2 = maior(a->dir);
-    int maior3= a->num;
+    if(a->num == b->num){
+        if(comp(a->esq,b->esq)){
+            if(comp(a->dir,b->dir)){
+                return 1;
+            }
+        }
+    }else return 0;
+}
 
-    if(maior1>maior3){
-        maior3=maior1;
+TNoA *copy(TNoA *a){
+    if(a==NULL){
+        return NULL;
     }
-    if(maior2>maior3){
-        maior3=maior2;
+    TNoA *novo;
+    novo=cria(a->num);
+    novo->esq = copy(a->esq);
+    novo->dir = copy(a->dir);
+
+    return novo;
+}
+
+void Libera(TNoA *ab){
+    if(ab){
+        Libera(ab->dir);
+        Libera(ab->esq);
+        free(ab);
     }
-    return maior3;
 }
 
 int main(){
     TNoA *raiz;
     TNoA *cop;
+    
     raiz = cria(1);
     raiz->esq = cria(2);
     raiz->dir = cria(3);
@@ -60,13 +76,18 @@ int main(){
     raiz->dir->esq = cria(6);
     raiz->dir->dir = cria(7);
 
-    imprime(raiz);
     cop = copy(raiz);
+    //cop->dir->dir->dir = cria(7);
+
+
+    imprime(raiz);
     printf("\n");
     imprime(cop);
+    printf("\n");
 
-    int m = maior(raiz);
-    printf("\n%d", m );
+    printf("COMP = %d", comp(raiz, cop));
 
+    Libera(raiz);
+    Libera(cop);    
     return 0;
 }

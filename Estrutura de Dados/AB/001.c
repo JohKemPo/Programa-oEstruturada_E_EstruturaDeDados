@@ -6,17 +6,17 @@ typedef struct noA {
     int chave;
     struct noA* esq;
     struct noA* dir;
-} TNoAB;
+} TNoAB;// Tipo No Arvore Binaria
 
 TNoAB *busca(TNoAB *ab, int chave){
     TNoAB *aux = ab;
-    while(ab != NULL){
+    while(ab != NULL){// percorre a arvore
         if(aux->chave == chave){
             return aux;
         }else if(aux->chave > chave){
-            aux = aux->esq;
+            aux = aux->esq;// se a chave for maior q o no, olhar para a esquerda
         }else{
-            aux = aux->dir;
+            aux = aux->dir;// se a chave for menor q o no, olhar para a direita
         }
     }
     return NULL;

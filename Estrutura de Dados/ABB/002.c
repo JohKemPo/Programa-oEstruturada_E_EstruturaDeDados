@@ -30,32 +30,61 @@ void imprime(TNoA *a){
     }
 }
 
-TNoA *copy(TNoA *a){
-    if(a==NULL){
-        return NULL;
+void Libera(TNoA *ab){
+    if(ab){
+        Libera(ab->dir);
+        Libera(ab->esq);
+        free(ab);
     }
-    TNoA *novo;
-    novo=cria(a->num);
-    novo->dir=copy(a->esq);
-    novo->esq=copy(a->dir);
+}
 
+TNoA *Espelha(TNoA *ab){
+    TNoA *novo = (TNoA*) malloc(sizeof(TNoA));
+    if(!novo)exit(1);
+
+    if(!ab) return NULL;
+
+    TNoA *aux = ab;
+    printf("aux = %d ", aux->num);
+    if(aux != NULL){
+
+        novo->num = ab->num;
+        
+        //inverte
+        novo->esq = Espelha(ab->dir);
+        novo->dir = Espelha(ab->esq);
+
+        //atualiza o aux
+        aux = Espelha(ab->esq);
+        aux = Espelha(ab->dir);
+    }
     return novo;
 }
 
+
 int main(){
     TNoA *raiz;
-    TNoA *cop;
+    TNoA *espelhada;
+
     raiz = cria(1);
+
     raiz->esq = cria(2);
     raiz->dir = cria(3);
     raiz->esq->esq = cria(4);
     raiz->esq->dir = cria(5);
     raiz->dir->esq = cria(6);
     raiz->dir->dir = cria(7);
+
+
     imprime(raiz);
-    cop = copy(raiz);
     printf("\n");
-    imprime(cop);
+
+    espelhada = Espelha(raiz);
+    printf("\n");
+    imprime(espelhada);
+
+    Libera(espelhada);
+    Libera(raiz);
 
     return 0;
 }

@@ -1,7 +1,4 @@
-/*
-1. Escreva uma função em C que faz a cópia de uma árvore: TAB* copia (TAB
-*a); 
-*/
+
 #include <stdio.h>
 #include<stdlib.h>
 
@@ -10,7 +7,6 @@ typedef struct NoA{
     struct NoA* esq;
     struct NoA* dir;
 }TNoA;
-
 
 TNoA *cria(int n){
     TNoA *novo = (TNoA*) malloc(sizeof(TNoA));
@@ -30,27 +26,22 @@ void imprime(TNoA *a){
     }
 }
 
-TNoA *copy(TNoA *a){
-    if(a==NULL){
-        return NULL;
-    }
-    TNoA *novo;
-    novo=cria(a->num);
-    novo->dir=copy(a->esq);
-    novo->esq=copy(a->dir);
 
-    return novo;
-}
-
-void comp(TNoA *a, TNoA *b){
-    if (a!= NULL || b != NULL){
-        
+void Libera(TNoA *ab){
+    if(ab){
+        Libera(ab->dir);
+        Libera(ab->esq);
+        free(ab);
     }
 }
 
+int zz(TNoA *a){
+    
+}
 int main(){
     TNoA *raiz;
-    TNoA *cop;
+    TNoA *zig;
+    
     raiz = cria(1);
     raiz->esq = cria(2);
     raiz->dir = cria(3);
@@ -58,10 +49,19 @@ int main(){
     raiz->esq->dir = cria(5);
     raiz->dir->esq = cria(6);
     raiz->dir->dir = cria(7);
-    imprime(raiz);
-    cop = copy(raiz);
-    printf("\n");
-    imprime(cop);
 
+    zig = cria(1);
+    zig->esq = cria(2);
+    zig->esq->dir = cria(3);
+    
+    imprime(raiz);
+    printf("\n");
+    imprime(zig);
+    printf("\n");
+
+    printf("Zz = %d", zz(zig));
+
+    Libera(raiz);
+    Libera(zig);
     return 0;
 }

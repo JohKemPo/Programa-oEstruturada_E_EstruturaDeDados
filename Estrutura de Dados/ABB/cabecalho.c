@@ -68,7 +68,7 @@ void criaArvoreBalanceada(TNoAB *raiz, int* v, int inicio, int fim){
 }
 int main(){
 
-    int v[] = {150, 300, 400, 500, 600, 800, 80};
+    int v[] = {150, 300, 400, 500, 600, 800};
     TNoAB* raiz;
 
     ordena(v);
