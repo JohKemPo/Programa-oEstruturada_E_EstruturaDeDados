@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // definindo o tipo da esturtura
 struct INFO {
@@ -24,10 +25,14 @@ tLista* criaLista(){
 // funcao para inserir elemento
 tLista* insereElemento(tLista* lista, int cod, char prod[40], float prc){
     tLista *novo;
-
+    
     novo = (tLista*)malloc(sizeof(tLista)); // aloca espaco na memoria
     novo->dados.codigo = cod;
-    novo->dados.nome[40] = prod[40];
+    
+    strcpy(novo->dados.nome, prod);
+
+    // novo->dados.nome[40] = prod[40]; ERROR
+
     novo->dados.preco = prc;
     novo->prox = lista; // aponta para onde lista estava apontando
     return novo;
@@ -37,8 +42,8 @@ tLista* insereElemento(tLista* lista, int cod, char prod[40], float prc){
 void imprimeLista(tLista* lista){
     tLista *aux; // ponteiro aux para n perder o endereco inicial
 
-    for(aux; aux != NULL; aux = aux->prox){
-        printf("cod: %d nome: %s  preco: %.2f -> ", aux->dados.codigo, aux->dados.nome, aux->dados.preco);
+    for(aux = lista; aux != NULL; aux = aux->prox){
+        printf("\ncod: %d nome: %s  preco: %.2f -> ", aux->dados.codigo, aux->dados.nome, aux->dados.preco);
     }
     printf("NULL \n");
 }
@@ -75,7 +80,7 @@ int main(){
     for(i = 0; i < qtd; i++){
         printf("Digite o codigo, o nome e o preco de um produto: \n");
         scanf("%d %s %f", &cod, prod, &prc);
-        printf(prod);
+        //printf(prod);
         fflush(stdin); // limpa o buffer de entrada
        
         no = insereElemento(no, cod, prod, prc);
