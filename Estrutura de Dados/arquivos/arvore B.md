@@ -29,6 +29,9 @@
 - Cada nó, nao folha  e nem raiz, tem no mínimo D + 1 filhos.
 - Cada nó tem no max 2d + 1 filhos.
 - Todas as folhas, apontando para null, estao no mesmo nível.
+- Seja M o número de chaves em uma página P, temos P com M + 1 filhos, P tem entre D e 2D chaves.
+- P contém m+1 ponteiros para filhos.
+
 
 <br>
 
