@@ -53,5 +53,55 @@
     - Se nãao, pt = ptNovo, volte ao passo 2.
 
 
+<br>
+<br>
+
+## **INSERÇÃO EM ARVORE B**
+<br>
+
+- Executa o algorítmo de busca.
+- Se a chave está no nó, inserção inválida.
+- Se chave não está no nó, inserção inválida.
+
+<br>
+
+## **INSERÇÃO EM ARVORE B, QUANDO NÓ CHEIO**
+<br>
+
+- Particionar a página, nó, em dois.
+- Na página P permanece os D primeiros elementos.
+- A entrada D + 1 sobre para o pai.
+- Alocar outra página Q, e nelaalocas as outras D chaves.
+- Repetir isso se necessário até a raiz, gerando uma nova raiz.
 
 
+<br>
+
+## **EXCLUSÃO EM ARVORE B**
+<br>
+
+- Caso E esteja em um nó folha fazer apenas a liberação dessa chave.
+- Se não, substituir chave pela chave apontada a direita maior.
+- Reorganizar o nó de onde foi retirado o elemento.
+
+
+<br>
+
+## **CONCATENAÇÃO EM ARVORE B, QUANDO A SOMA DAS QTD DE CHAVES  <= 2D**
+<br>
+
+- TODO NÓ DEVE TER AO MENOS **D** CHAVES, EXCETO O NÓ RAIZ QUE PODE TER 1 CHAVE.
+- Duas páginas D e Q são adjacentes se têm o mesmo pai W e são apontadas por dois ponteiros adjacentes em W.
+- P e Q podem ser concatenados se são irmãs adjacentes e juntas possuem 2D chaves.
+- A concatenação é uma forma de diminuir a arvore.
+
+<br>
+
+## **REDITTRIBUIÇÃO EM ARVORE B, QUANDO A SOMA DAS QTD DE CHAVES  >= 2D**
+<br>
+
+- TODO NÓ DEVE TER AO MENOS **D** CHAVES, EXCETO O NÓ RAIZ QUE PODE TER 1 CHAVE.
+- Concatenar P e Q.
+- Isso resulta em um nó com mais de 2D chaves, nao permitido.
+- Particionar nó P usando Q como novo nó.
+- Essa operação não é propagável. o nó pai W é alterado mais seu número de chaves não é alterado.
