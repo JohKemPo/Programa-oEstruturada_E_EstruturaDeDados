@@ -132,7 +132,6 @@ void insertE(knot *lst){
             tmp = tmp->next;
         }
         tmp->next = new;
-
     }
     system("cls");
 }

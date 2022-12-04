@@ -70,32 +70,34 @@ int contaElemento_norec(tLista *lista){
 	return x;
 }
 
+
 void insere_fim(tLista *l, int elem){
-	tLista* novo = (tLista*) malloc(sizeof(tLista));
-	if(!novo)exit(1);
+	tLista * new = (tLista*) malloc(sizeof(tLista));
+    if(new == NULL)exit(1);
 
-	if(l == NULL){
-		l->prox = novo;
-	}else{
-		tLista* aux = l->prox;
-		while(aux->prox != NULL){
-			aux = aux->prox;
-		}
-		aux->prox = novo;
-	}
+    new->info = elem;
+    new->prox = NULL;
+
+    if(l->prox == NULL){
+        l->prox = new;
+    }else{
+        tLista *tmp = l->prox;
+
+        while (tmp->prox != NULL){
+            tmp = tmp->prox;
+        }
+        tmp->prox = new;
+    }
 }
-
-
-
 
 int main(){
 	tLista *no;
-	tLista *no2 = (tLista*) malloc(sizeof(tLista));
+	tLista *no2;
 	int i, elem, qtd;
 	int conta;
     int n = 0;
 	
-	start(no2);
+	//start(no2);
 	no = criaLista();
 	
 	printf("Digite a quantidade de elementos a serem inseridos na lista: \n");
@@ -105,11 +107,11 @@ int main(){
 		printf("Digite o %d elemento: \n", i+1);
 		scanf("%d", &elem);
 		no = insereElemento_inicio(no, elem);
-		insere_fim(no2, elem);
+		//insere_fim(no2, elem);
 	}
 	
 	imprimeLista(no);
-	imprimeLista(no2);
+	//imprimeLista(no2);
 	
 	// conta = contaElemento_norec(no);
 	// conta = contaElemento_recursivo(no,0);
