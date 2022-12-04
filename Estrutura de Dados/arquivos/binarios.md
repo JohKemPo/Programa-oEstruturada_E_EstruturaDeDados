@@ -19,6 +19,11 @@
 <br>
 
 -  fseek() - posiciona o cursos em um byte especifico
+    - fseek( FILE * arq, long int descolamento, int flag)
+        - FLAGS
+        - SEEK_SET - inicio
+        - SEEK_CUR - atual
+        - SEEK_END - fim
 - ftell() - retorna a poisçao atual do cursor
 - rewind() - cursor no inicio do arquivo
 - fread() - le dado bin

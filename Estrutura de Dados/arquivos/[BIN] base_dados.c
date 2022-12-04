@@ -1,14 +1,9 @@
 #include <stdio.h>
 #include<stdlib.h>
+#include <string.h>
 
-typedef struct Funcionarios{
-    int id;
-    char nome[40];
-    char cpf[15];
-    data_nasc[11];
-    double salario;
-}TFunc;
-void salvaBin(TFunc *fun, FILE* out);
+#include "[BIN] base_dados.h"
+
 int main(){
 
     return 0;
@@ -36,4 +31,31 @@ TFunc* leituraBin(FILE* in){
     fread(&func->salario,sizeof(double),1,in);
     
     return func;
+}
+int tamanho_regsitro(){
+    return sizeof(int) 
+         + sizeof(char) * 40 
+         + sizeof(char) * 15 
+         + sizeof(char) * 11 
+         + sizeof(double);
+}
+
+int tamanhoArquivo(FILE* arq){
+    fseek(arq,0,   SEEK_SET);
+    int tam = trunc(ftell(arq)/tamanho_registro());
+}
+
+void imprime(TFunc *func) {
+    printf("**********************************************");
+    printf("\nFuncionario de código ");
+    printf("%d", func->id);
+    printf("\nNome: ");
+    printf("%s", func->nome);
+    printf("\nCPF: ");
+    printf("%s", func->cpf);
+    printf("\nData de Nascimento: ");
+    printf("%s", func->data_nasc);
+    printf("\nSalário: ");
+    printf("%4.2f", func->salario);
+    printf("\n**********************************************");
 }
