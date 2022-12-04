@@ -7,7 +7,7 @@
 typedef struct No {
     int m; //quantidade de chaves armazenadas no nó
     struct No *pai;// ponterio par ao no pai
-    int *s; //array de chaves
+    int *s; //array de chaves --> pode ser um array de infos
     struct No **p; //ponteiro para array de ponteiros para os filhos
 } TNo;
 
