@@ -113,8 +113,17 @@
 <br>
 
 
-Semelhante a arvore B+, porém com 2 diferenças:
+Semelhante a arvore B, porém com 2 diferenças:
 
+ **RELEMBRANDO**
+- A raiz é folha ou tem ao menos 2 filhos.
+- Cada nó interno ( nao folha e nao raiz ) possui ao menos  D + 1 filhos.
+- Cada nó tem no maximo 2D + 1 filhos.
+- Todas as folhas estao no mesmo nível e apontam para NULL.
+
+<br>
+
+**ARVORE B+**
 - Armazena dados somente nas folhas - os nós internos só servem apenas de ponteiros.
-- As folhas são encadeadas.
+- As folhas são encadeadas, ou seja não apontam para NULL>
 - Índices e chaves se repetem.
