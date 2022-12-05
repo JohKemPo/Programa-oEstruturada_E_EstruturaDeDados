@@ -117,3 +117,4 @@ Semelhante a arvore B+, porém com 2 diferenças:
 
 - Armazena dados somente nas folhas - os nós internos só servem apenas de ponteiros.
 - As folhas são encadeadas.
+- Índices e chaves se repetem.
