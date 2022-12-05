@@ -1,4 +1,4 @@
-# **ARVORE B**
+# **ARVORE B e B+**
 <br>
 <br>
 
@@ -105,3 +105,15 @@
 - Isso resulta em um nó com mais de 2D chaves, nao permitido.
 - Particionar nó P usando Q como novo nó.
 - Essa operação não é propagável. o nó pai W é alterado mais seu número de chaves não é alterado.
+
+<br>
+<br>
+
+# **ARVORE B+**
+<br>
+
+
+Semelhante a arvore B+, porém com 2 diferenças:
+
+- Armazena dados somente nas folhas - os nós internos só servem apenas de ponteiros.
+- As folhas são encadeadas.
