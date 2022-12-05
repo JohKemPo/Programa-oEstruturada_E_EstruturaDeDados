@@ -127,3 +127,12 @@ Semelhante a arvore B, porém com 2 diferenças:
 - Armazena dados somente nas folhas - os nós internos só servem apenas de ponteiros.
 - As folhas são encadeadas, ou seja não apontam para NULL>
 - Índices e chaves se repetem.
+
+
+<br>
+
+### *EXEMPLO*
+<!--![image](https://user-images.githubusercontent.com/74382074/205699868-f5b3d3ff-49b3-4698-807c-c97265fab5a0.png)-->
+<image src="https://user-images.githubusercontent.com/74382074/205699868-f5b3d3ff-49b3-4698-807c-c97265fab5a0.png" width=80% ></image>
+
+<br>
