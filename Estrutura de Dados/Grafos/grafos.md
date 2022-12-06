@@ -63,18 +63,53 @@ Um vértice V1 é adjacente a um V2 em G, se exite uma aresta conectando V1 a V2
 
 
 <br>
-<!--![image](https://user-images.githubusercontent.com/74382074/206012260-23551925-12eb-4e2a-8262-04af6cb927bb.png)-->
+
+### *EXEMPLO DE ADJACÊNCIA*
+
 <image src="https://user-images.githubusercontent.com/74382074/206012260-23551925-12eb-4e2a-8262-04af6cb927bb.png" width=80%></image><br>
+
+### *EXEMPLO DE CONTAGEM DE CAMINHO*
 <image src="https://user-images.githubusercontent.com/74382074/206016566-1da2c4c4-d400-4e79-98b9-2fbdb86f9824.png" width=80%></image><br>
 
 
+ <br>
+
+## **REPRESENTAÇÃO DE GRAFOS**
+<br>
+
+### **MATRIZ DE ADJACÊNCIA**
+<br>
+
+É uma matriz A( n x n ) de um grafo G de ordem n, onde n é o número de vértices.
+
+- Inserção de novas arestas é muito fácil, só mudar o valor de um determinado elemento da matriz.
+- Inserção de novos vértices exige uma restrturação da matriz, isso torna difícil a inserção.
+
+
+<br>
+
+### **MATRIZ DE INCIDÊNCIA**
+<br>
+
+É uma matriz B( n x m ), sendo n o número de vértices, m o número de arestas e quando uma ccélula estiver preenchida com, para grafos não orientados:
+- -1 se o vértice é a origem da aresta.
+- 1 se o vértice é o término da aresta.
+- 0 se a aresta não pertence ao grafo.
+
+### **LISTA DE ADJACÊNCIA**
+<br>
+
+Uma lista encadeada que representa a lsita desses vértices, e uma outra que representa quais são as arestas que existem ligando esses vértices.
+
+
+
+
+### **LISTA DE INCIDÊNCIA**
+<br>
+
+
+<br>
  <br><br>
-
-
-
- <br><br>
-
-
 
 ## **Algoritmos**
 
