@@ -101,6 +101,10 @@ Um vértice V1 é adjacente a um V2 em G, se exite uma aresta conectando V1 a V2
 
 Uma lista encadeada que representa a lsita desses vértices, e uma outra que representa quais são as arestas que existem ligando esses vértices.
 
+## *EXEMPLO*
+
+<image src="https://user-images.githubusercontent.com/74382074/206020131-d61bebb4-4a9c-4a7b-86c4-b13c7e88fa25.png" width=80%></image><br>
+
 
 
 
