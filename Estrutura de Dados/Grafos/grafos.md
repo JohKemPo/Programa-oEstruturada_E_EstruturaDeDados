@@ -41,6 +41,15 @@ Um grafo pode ser VALORADO se possuir valores ( pesos ) associados as arestas e/
  <!--![image](https://user-images.githubusercontent.com/74382074/206010917-e5d9a5a7-a4ed-4799-b031-85e4cbe8fbce.png)-->
 ### *EXEMPLO DE GRAFO VALORADO*
  <image src="https://user-images.githubusercontent.com/74382074/206010917-e5d9a5a7-a4ed-4799-b031-85e4cbe8fbce.png" width=50% alt="EXEMPLO DE GRAFO COM PESOS"></image>
+ <br>
+
+
+### **DEFINIÇÕES E TERMINOLOGIAS**
+
+<br>
+
+<!--![image](https://user-images.githubusercontent.com/74382074/206012260-23551925-12eb-4e2a-8262-04af6cb927bb.png)-->
+<image src="https://user-images.githubusercontent.com/74382074/206012260-23551925-12eb-4e2a-8262-04af6cb927bb.png" width=50%></image>
  <br><br>
  <br><br>
 
