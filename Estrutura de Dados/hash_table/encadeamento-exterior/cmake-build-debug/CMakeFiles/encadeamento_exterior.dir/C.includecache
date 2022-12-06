@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/vanessa/Dropbox/Documents/Disciplinas/ED/Aulas/13-Hash/encadeamento-exterior/main.c
+stdio.h
+-
+stdio.h
+-
+stdlib.h
+-
+
