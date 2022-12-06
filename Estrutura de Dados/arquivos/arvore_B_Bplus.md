@@ -135,4 +135,31 @@ Semelhante a arvore B, porém com 2 diferenças:
 <!--![image](https://user-images.githubusercontent.com/74382074/205699868-f5b3d3ff-49b3-4698-807c-c97265fab5a0.png)-->
 <image src="https://user-images.githubusercontent.com/74382074/205699868-f5b3d3ff-49b3-4698-807c-c97265fab5a0.png" width=80% ></image>
 
+
+
+### *ÍNDICES REPETEM VALORES DE CHAVE QUE APARECE NAS FOLHAS*
+
 <br>
+
+**ARVORE B+ BUSCA**
+- Achou chave maior que a chave de busca, desce pelo ponteiro da esquerda.
+- Achou chave igual a chave de busca, desce pelo ponteiro da direita.
+
+<br>
+
+## **INSERÇÃO EM ARVORE B+**
+<br>
+
+- Lógica similar a de arvore B.
+- Diferenciando em:
+     - Para a página Pai sobe somente o valor da chave. O registro fica na folha, juntamente com sua chave.
+    - Isso só vale se o nó  que está sendo particionado for uma folha.
+    - Se não, seguir o mesmo procedimento da arvore B.
+
+<br>
+
+## **EXCLUSÃO EM ARVORE B+**
+<br>
+
+- Exclusão ocorre apenas no nó folha.
+- Chaves excluidas continuam nos nós intermediários.
