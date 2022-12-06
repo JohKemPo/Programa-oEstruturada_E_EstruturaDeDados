@@ -34,6 +34,9 @@
         No exemplo de representação de relação em redes sociais, temos que o usuário A segue um usuário B, não é garantido que o contrário seja verdadeiro também.
 
         Um grafo pode ser VALORADO se possuir valores ( pesos ) associados as arestas e/ou aos vértices.
+        
+ <!--![image](https://user-images.githubusercontent.com/74382074/206010917-e5d9a5a7-a4ed-4799-b031-85e4cbe8fbce.png)-->
+ <image src="https://user-images.githubusercontent.com/74382074/206010917-e5d9a5a7-a4ed-4799-b031-85e4cbe8fbce.png" width=50% alt="EXEMPLO DE GRAFO COM PESOS"></image>
 
 ## **Algoritmos**
 
