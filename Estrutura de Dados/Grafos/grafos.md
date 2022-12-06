@@ -64,7 +64,10 @@ Um vértice V1 é adjacente a um V2 em G, se exite uma aresta conectando V1 a V2
 
 <br>
 <!--![image](https://user-images.githubusercontent.com/74382074/206012260-23551925-12eb-4e2a-8262-04af6cb927bb.png)-->
-<image src="https://user-images.githubusercontent.com/74382074/206012260-23551925-12eb-4e2a-8262-04af6cb927bb.png" width=80%></image>
+<image src="https://user-images.githubusercontent.com/74382074/206012260-23551925-12eb-4e2a-8262-04af6cb927bb.png" width=80%></image><br>
+<image src="https://user-images.githubusercontent.com/74382074/206016566-1da2c4c4-d400-4e79-98b9-2fbdb86f9824.png" width=80%></image><br>
+
+
  <br><br>
 
 
