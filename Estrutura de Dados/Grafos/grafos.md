@@ -20,8 +20,8 @@ Um grafo G é representado por um conjunto, não vazio, V de vértices e um conj
 
 Arestas podem ser unidirecionais ou bidirecionais. 
 
-Grafos orientados possuem arestas unidirecionais, também são chamados de DIGRAFOS. 
-Grafos não orientados possuem arestas bidirecionais ( Se exite uma conexão a --> b então também existe uma conexão b --> a ).
+***Grafos orientados*** possuem arestas unidirecionais, também são chamados de DIGRAFOS. 
+***Grafos não orientados*** possuem arestas bidirecionais ( Se exite uma conexão a --> b então também existe uma conexão b --> a ).
 
 Forma de representar um grafo:
 
@@ -48,10 +48,30 @@ Um grafo pode ser VALORADO se possuir valores ( pesos ) associados as arestas e/
 
 <br>
 
+Um vértice V1 é adjacente a um V2 em G, se exite uma aresta conectando V1 a V2 em G.
+
+<br>
+
+- Em grafo não orientado: V1 é adjacente a V2 se existe { V1, V2 }, nesse caso V2 também é adjacente a V1. 
+- Em grafos orientados: V1 é adjacente a V2 se existe aresta ( V1, V2 ).
+- Já para as arestas, em um grafo orientado uma aresta ( V1, V2 ) e incidente de  "sai de" V1 e é incidente "entra em" V2.
+- Em grafos não orientados, uma aresta { V1, V2 } é incidente em V1 e V2.
+- Grau de um vértice é o número de aresta desse vértice de um grafo, a quantos outros vértices ele está ligado.
+- Vértices de grau 0 são ditos vértices isolados.
+- A ordem de um grafo é o número de vértices do grafo.
+
+
+
+<br>
 <!--![image](https://user-images.githubusercontent.com/74382074/206012260-23551925-12eb-4e2a-8262-04af6cb927bb.png)-->
-<image src="https://user-images.githubusercontent.com/74382074/206012260-23551925-12eb-4e2a-8262-04af6cb927bb.png" width=50%></image>
+<image src="https://user-images.githubusercontent.com/74382074/206012260-23551925-12eb-4e2a-8262-04af6cb927bb.png" width=80%></image>
  <br><br>
+
+
+
  <br><br>
+
+
 
 ## **Algoritmos**
 
