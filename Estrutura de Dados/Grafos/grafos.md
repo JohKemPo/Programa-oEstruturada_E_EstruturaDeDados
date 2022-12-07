@@ -77,6 +77,8 @@ Um vértice V1 é adjacente a um V2 em G, se exite uma aresta conectando V1 a V2
 ## **REPRESENTAÇÃO DE GRAFOS**
 <br>
 
+<br>
+
 ### **MATRIZ DE ADJACÊNCIA**
 <br>
 
@@ -88,6 +90,8 @@ Um vértice V1 é adjacente a um V2 em G, se exite uma aresta conectando V1 a V2
 
 <br>
 
+<br>
+
 ### **MATRIZ DE INCIDÊNCIA**
 <br>
 
@@ -96,7 +100,9 @@ Um vértice V1 é adjacente a um V2 em G, se exite uma aresta conectando V1 a V2
 - 1 se o vértice é o término da aresta.
 - 0 se a aresta não pertence ao grafo.
 
-### **LISTA DE ADJACÊNCIA**
+<br>
+
+### **LISTA DE ADJACÊNCIA - PRINCIPAL USADA**
 <br>
 
 Uma lista encadeada que representa a lsita desses vértices, e uma outra que representa quais são as arestas que existem ligando esses vértices.
@@ -108,12 +114,15 @@ Uma lista encadeada que representa a lsita desses vértices, e uma outra que rep
 
 
 
+<br>
+
 ### **LISTA DE INCIDÊNCIA**
 <br>
 
+Representa as arestas, lista encadeada simples representado pares para as arestas.
 
 <br>
- <br><br>
+<br><br>
 
 ## **Algoritmos**
 
